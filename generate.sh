@@ -6,4 +6,5 @@ if [ -z "${NAME}" ]; then
   exit 1
 fi
 aws ecs create-cluster --cluster-name ${NAME}
-aws ecs list-clusters
+# aws ecs list-clusters
+aws ecs describe-clusters --clusters ${NAME}
